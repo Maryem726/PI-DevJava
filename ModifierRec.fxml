@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="550.0" style="-fx-background-color: #D3D3D3;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ControllerModifier">
+    <children>
+        <Label layoutX="149.0" layoutY="84.0" text="Modifier votre Reclamation" textAlignment="CENTER">
+            <font>
+                <Font size="21.0" />
+            </font>
+        </Label>
+        <Label layoutX="107.0" layoutY="189.0" prefHeight="25.0" prefWidth="157.0" text="Tapez ci_dessous" />
+        <TextField fx:id="tfréclamation2" layoutX="107.0" layoutY="221.0" prefHeight="99.0" prefWidth="336.0" />
+        <Button fx:id="modifier" layoutX="374.0" layoutY="375.0" mnemonicParsing="false" onAction="#ModifierRec" style="-fx-background-color: #8B0000;" text="Confirmer" textFill="WHITE" />
+        <Button fx:id="annuler" layoutX="107.0" layoutY="375.0" mnemonicParsing="false" style="-fx-background-color: #8B0000;" text="Annuler" textFill="WHITE" />
+    </children>
+</AnchorPane>

@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+{% block container %}
+    <section id="main-content">
+        <section class="wrapper">
+            <div class="row">
+                <div class="container">
+                    <h1>Quiz index</h1>
+
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>IdQuiz</th>
+                            <th>Categories</th>
+                            <th>Quiz</th>
+
+                            <th>Duree</th>
+                            <th>DateCreation</th>
+
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for quiz in quizzes %}
+                            <tr>
+                                <td>{{ quiz.idQuiz }}</td>
+                                <td>{{ quiz.categories }}</td>
+                                <td>{{ quiz.quiz }}</td>
+
+                                <td>{{ quiz.duree }}</td>
+                                <td>{{ quiz.dateCreation ? quiz.dateCreation|date('Y-m-d') : '' }}</td>
+                                <td>
+
+                                    <a class="fa fa-plus"  href="{{ path('quiz_edit1', {'idQuiz': quiz.idQuiz}) }}"></a>
+                                    <a class="fa fa-file" href="{{ (quiz.Quiz) }}"></a>
+
+                                </td>
+                            </tr>
+                        {% else %}
+                            <tr>
+                                <td colspan="7">no records found</td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+
+                    <a  class="btn btn-primary" href="{{ path('quiz_new') }}">Create Quiz</a>
+                </div>
+
+            </div>
+
+        </section>
+    </section>
+{% endblock %}
